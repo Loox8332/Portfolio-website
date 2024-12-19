@@ -1,0 +1,15 @@
+body {
+    font-family: consolas, sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+}
+
+header {
+    font-size: 10vw;
+}
+
+p {
+    font-size: 1vw;
+}
+
