@@ -5,11 +5,28 @@ body {
     text-align: center;
 }
 
-header {
-    font-size: 10vw;
+h1 {
+    font-size: 5vw;
 }
 
 p {
     font-size: 1vw;
 }
 
+.left {
+    background-color: red;
+    float: left;
+    width: 50%;
+  }
+  
+.right {
+    background-color: red;
+    float: left;
+    width: 50%;
+  }
+
+@media screen and (max-width: 800px) {
+    .left, .right {
+      width: 100%;
+    }
+  }
