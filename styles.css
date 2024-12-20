@@ -3,6 +3,7 @@ body {
     background-color: #1a1a1a;
     color: white;
     text-align: center;
+    font-weight: bold;
 }
 
 h1 {
@@ -32,20 +33,53 @@ a:hover {
     top: 20%;
     bottom: 30%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
     grid-row: auto auto;
     .box {
         display: flex;
         align-items:center;
         justify-content:center;
-        padding: 5%;
+        padding: 0%;
     }
 }
 
 @media screen and (max-width: 1000px) {
   .container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-row: auto;
+  }
+}
+
+.scroll {
+  white-space: nowrap;
+  margin: 0 2em;
+}
+
+.scroll div {
+  display: flex;
+  gap: 2em;
+}
+
+.scroll p {
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  font-size: 2500%;
+  margin-bottom: 0;
+  line-height: 20px;
+  color: rgb(46, 46, 46);
+}
+
+.RightToLeft {
+  animation: RightToLeft 10s infinite linear;
+}
+
+@keyframes RightToLeft {
+  from {
+    transform: translateX(0%);
+  }  
+  to {
+    transform: translateX(-15%);
   }
 }
 
