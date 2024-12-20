@@ -8,6 +8,7 @@ body {
 
 h1 {
     font-size: 500%;
+    text-align: center;
 }
 
 p {
@@ -62,10 +63,27 @@ a:hover {
   }
 }
 
+.socials {
+    grid-template-columns: 33% 33% 33%; 
+    display: grid;
+}
+
+.about {
+  text-align: justify;
+  text-justify: 
+}
+
 @media screen and (max-width: 1000px) {
   .container {
     grid-template-columns: 100%;
     grid-row: auto;
+  }
+  .subcontainer {
+    left: 10%;
+    right: 10%;
+  }
+  .socials {
+    grid-template-columns: 100%;
   }
 }
 
