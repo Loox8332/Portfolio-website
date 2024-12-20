@@ -52,16 +52,19 @@ a:hover {
 
 .scroll {
   white-space: nowrap;
-  margin: 0 2em;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
 }
 
 .scroll div {
-  display: flex;
+  display: inline-block;
+  padding-left: 100%;
   gap: 2em;
 }
 
 .scroll p {
-  position: absolute;
   left: 0%;
   top: 50%;
   font-size: 2500%;
@@ -71,15 +74,15 @@ a:hover {
 }
 
 .RightToLeft {
-  animation: RightToLeft 10s infinite linear;
+  animation: RightToLeft 20s infinite linear;
 }
 
 @keyframes RightToLeft {
   from {
-    transform: translateX(0%);
+    transform: translateX(100%);
   }  
   to {
-    transform: translateX(-15%);
+    transform: translateX(-100%);
   }
 }
 
