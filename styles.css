@@ -121,23 +121,3 @@ a:hover {
     transform: translateX(-150%);
   }
 }
-
-/*
-.left {
-    background-color: red;
-    float: left;
-    width: 50%;
-  }
-  
-.right {
-    background-color: red;
-    float: left;
-    width: 50%;
-  }
-
-@media screen and (max-width: 800px) {
-    .left, .right {
-      width: 100%;
-    }
-  }
-*/
