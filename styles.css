@@ -121,3 +121,18 @@ a:hover {
     transform: translateX(-150%);
   }
 }
+
+.animate-in {
+  -webkit-animation: fadeIn .5s ease-in-out;
+  animation: fadeIn .5s ease-in-out;
+}
+
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
