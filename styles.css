@@ -70,7 +70,7 @@ a:hover {
 
 .about {
   text-align: justify;
-  text-justify: 
+  text-justify: none;
 }
 
 @media screen and (max-width: 1000px) {
