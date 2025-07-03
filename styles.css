@@ -35,6 +35,12 @@ a:hover {
   display: block;
 }
 
+.copyright {
+    font-size: 80%;
+    text-align: center;
+    color: #888;
+}
+
 .container {
     position: absolute;
     left: 30%;
