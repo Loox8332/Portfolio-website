@@ -7,7 +7,7 @@ body {
 }
 
 h1 {
-    font-size: 500%;
+    font-size: clamp(2rem, 10vw, 5rem); /* Responsive scaling */
     text-align: center;
 }
 
@@ -52,15 +52,23 @@ a:hover {
     grid-row: auto auto;
     white-space: normal; /* Allow text to wrap */
     /*border: 1px solid white;*/
-    .box {
-        display: flex;
-        align-items:center;
-        justify-content:center;
-        text-justify: auto;
-        padding: 0%;
-        white-space: normal;
-    }
 }
+.container .box {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    text-justify: auto;
+    padding: 0%;
+    white-space: normal;
+}
+
+.box model-viewer {
+    width: 100%;
+    height: 300px; /* or another reasonable min height */
+    min-height: 200px;
+    display: block;
+}
+
 
 .portcontainer {
     padding-top: 0%;
@@ -69,21 +77,25 @@ a:hover {
     padding-left: 20%;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-auto-rows: 50vh;
+    grid-auto-rows: auto;
     white-space: normal; /* Allow text to wrap */
     /*border: 1px solid white;*/
-    .box {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        position: relative;
-        align-items:center;
-        justify-content:center;
-        text-justify: auto;
-        white-space: normal;
-        overflow: hidden;
-    }
 }
+.portcontainer .box {
+    min-width: 0;
+    min-height: 0;
+    word-break: break-word;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    align-items:center;
+    justify-content:center;
+    text-justify: auto;
+    white-space: normal;
+    /*overflow: hidden;*/
+}
+
 
 .subcontainer {
   position: absolute;
@@ -97,14 +109,15 @@ a:hover {
   grid-template-columns: 100%;
   grid-row: auto auto;
   white-space: normal; /* Allow text to wrap */
-  .box {
-      display: flex;
-      align-items:center;
-      justify-content:center;
-      padding: 0%;
-      white-space: normal;
-  }
 }
+.subcontainer .box {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    padding: 0%;
+    white-space: normal;
+}
+
 
 .socials {
     grid-template-columns: 33% 33% 33%; 
@@ -116,7 +129,7 @@ a:hover {
   text-justify: auto;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1400px) {
   .container {
     grid-template-columns: 100%;
     grid-row: auto;
@@ -124,6 +137,9 @@ a:hover {
   .portcontainer {
     grid-template-columns: 100%;
     grid-row: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 10%;
   }
   .subcontainer {
     left: 10%;
@@ -132,6 +148,7 @@ a:hover {
   .socials {
     grid-template-columns: 100%;
   }
+
 }
 
 .scroll {
